@@ -46,7 +46,7 @@ function Login() {
             alert("No users data set in your local storage.");
             return false;
         }
-        const accountFound = users.find((user) => user.email === data.email);
+        const accountFound = users.find((user) => user.email === data.email.toLowerCase());
         // usually, we never reveal which part of credentials are wrong but for instance 
         if (!accountFound) {
             alert("This email doen't exist on the system");
