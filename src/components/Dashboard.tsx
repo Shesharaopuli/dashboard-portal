@@ -51,9 +51,9 @@ function Dashboard() {
             <Container>
                 <Row>
                     <Col sm={2}>
-                        <Nav defaultActiveKey="/" variant='pills' className="flex-column" style={{ marginTop: '20px' }}>
-                            <Nav.Link eventKey="userLink" onClick={loadUsers}>Users</Nav.Link>
-                            <Nav.Link eventKey="photoLink" onClick={loadPhotos}>Photos</Nav.Link>
+                        <Nav activeKey={showing} variant='pills' className="flex-column" style={{ marginTop: '20px' }}>
+                            <Nav.Link eventKey="users" onClick={loadUsers}>Users</Nav.Link>
+                            <Nav.Link eventKey="photos" onClick={loadPhotos}>Photos</Nav.Link>
                         </Nav>
                     </Col>
                     <Col sm={10}>
