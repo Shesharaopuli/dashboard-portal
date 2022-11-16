@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getUserFromStorage } from "../components/Login";
 import { IUser } from "../../../dashboard-portal/src/Interfaces/IUser";
 
 const initialStateValue: IUser = {

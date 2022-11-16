@@ -1,14 +1,13 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
 import { IUser } from '../../../dashboard-portal/src/Interfaces/IUser';
-import Login from './Login';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Col, Dropdown, DropdownButton, Row, Stack } from 'react-bootstrap';
-import { logout, setRefreshLogin } from "../features/user";
-import { BrowserRouter, Link, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
+import { Col, Dropdown, DropdownButton, Row } from 'react-bootstrap';
+import { logout } from "../features/user";
+import { Navigate } from 'react-router-dom';
 import "./Dashboard.css";
 import Users from './Users';
 import Photos from './Photos';
@@ -26,7 +25,6 @@ function Dashboard() {
         setShowing("photos");
     };
     const user: IUser = useSelector((state: any) => state.user.value);
-    console.log("user selector", user);
 
     if (!user.isLoggedIn) {
         return <Navigate replace to="/login" />;

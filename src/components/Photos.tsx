@@ -1,6 +1,6 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 const PHOTO_URL = "https://jsonplaceholder.typicode.com/photos";
 

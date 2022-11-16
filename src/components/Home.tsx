@@ -8,7 +8,6 @@ import { setRefreshLogin } from '../features/user';
 function Home() {
     const dispatch = useDispatch();
     const userDetails: string | null = localStorage.getItem("user");
-    console.log("userDetails from APP", userDetails)
     if (!userDetails) {
         return <Login />;
     }
